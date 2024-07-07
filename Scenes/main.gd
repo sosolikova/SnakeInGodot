@@ -83,4 +83,13 @@ func start_game():
 
 
 func _on_move_timer_timeout():
-	pass # Replace with function body.
+	#allow snake movement
+	can_move = true
+	#use the snake's previous position to move the segments
+	old_data = [] + snake_data
+	snake_data[0] += move_direction
+	for i in range(len(snake_data)):
+		#move all the segments along by one
+		if i > 0:
+			snake_data[i] = old_data[i - 1]
+		snake[i].position = (snake_data[i] * cell_size) + Vector2(0, cell_size)
