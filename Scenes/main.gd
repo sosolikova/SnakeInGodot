@@ -1,5 +1,7 @@
 extends Node2D
 
+@export var snake_scene : PackedScene
+
 # game variables
 var score : int
 var game_started : bool = false
