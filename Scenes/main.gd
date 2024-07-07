@@ -101,3 +101,7 @@ func check_out_of_bounds():
 	if snake_data[0].x < 0 or snake_data[0].x > cells - 1 or snake_data[0].y < 0 or snake_data[0].y > cells - 1:
 		end_game()
 
+func check_self_eaten():
+	for i in range(1, len(snake_data)):
+		if snake_data[0] == snake_data[i]:
+			end_game()
