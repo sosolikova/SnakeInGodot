@@ -77,3 +77,6 @@ func move_snake():
 			if not game_started:
 				start_game()
 
+func start_game():
+	game_started = true
+	$MoveTimer.start()
