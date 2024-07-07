@@ -43,7 +43,13 @@ func generate_snake():
 	for i in range(3):
 		add_segment(start_pos + Vector2(0, i))
 
-
+func add_segment(pos):
+	snake_data.append(pos)
+	var SnakeSegment = snake_scene.instantiate()
+	SnakeSegment.position = (pos * cell_size) + Vector2(0, cell_size)
+	add_child(SnakeSegment)
+	snake.append(SnakeSegment)
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
