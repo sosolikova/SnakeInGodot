@@ -35,6 +35,7 @@ func _ready():
 
 func new_game():
 	get_tree().paused = false
+	get_tree().call_group("segments", "queue_free")
 	$GameOverMenu.hide()
 	score = 0
 	$Hud.get_node("ScoreLabel").text = "SCORE: " + str(score)
