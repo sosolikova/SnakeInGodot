@@ -139,4 +139,4 @@ func end_game():
 
 
 func _on_game_over_menu_restart():
-	pass # Replace with function body.
+	new_game()
