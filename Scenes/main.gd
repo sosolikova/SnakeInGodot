@@ -93,3 +93,11 @@ func _on_move_timer_timeout():
 		if i > 0:
 			snake_data[i] = old_data[i - 1]
 		snake[i].position = (snake_data[i] * cell_size) + Vector2(0, cell_size)
+	check_out_of_bounds()
+	check_self_eaten()
+	check_food_eaten()
+
+func check_out_of_bounds():
+	if snake_data[0].x < 0 or snake_data[0].x > cells - 1 or snake_data[0].y < 0 or snake_data[0].y > cells - 1:
+		end_game()
+
