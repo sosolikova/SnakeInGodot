@@ -136,3 +136,7 @@ func end_game():
 	$MoveTimer.stop()
 	game_started = false
 	get_tree().paused = true
+
+
+func _on_game_over_menu_restart():
+	pass # Replace with function body.
