@@ -132,4 +132,7 @@ func move_food():
 	regen_food = true
 
 func end_game():
-	pass
+	$GameOverMenu.show()
+	$MoveTimer.stop()
+	game_started = false
+	get_tree().paused = true
