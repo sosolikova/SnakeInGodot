@@ -27,7 +27,16 @@ var can_move: bool
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	new_game()
+
+func new_game():
+	score = 0
+	$Hud.get_node("ScoreLabel").text = "SCORE: " + str(score)
+	move_direction = up
+	can_move = true
+	generate_snake()
+	
+
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
