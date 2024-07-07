@@ -36,7 +36,12 @@ func new_game():
 	can_move = true
 	generate_snake()
 	
-
+func generate_snake():
+	old_data.clear()
+	snake_data.clear()
+	snake.clear()
+	for i in range(3):
+		add_segment(start_pos + Vector2(0, i))
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
