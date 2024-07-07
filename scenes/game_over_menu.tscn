@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://b6o3b323q1k8b"]
+[gd_scene load_steps=7 format=3 uid="uid://b6o3b323q1k8b"]
 
+[ext_resource type="Script" path="res://Scenes/game_over_menu.gd" id="1_45ndn"]
 [ext_resource type="FontFile" uid="uid://cjtp31ja6vdfq" path="res://assets/MaldiniBold.ttf" id="1_imkjy"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ssdin"]
@@ -17,6 +18,7 @@ bg_color = Color(0.830659, 0.48136, 0.54331, 1)
 bg_color = Color(0.330101, 0.671323, 0.605532, 1)
 
 [node name="GameOverMenu" type="CanvasLayer"]
+script = ExtResource("1_45ndn")
 
 [node name="GameOverPanel" type="Panel" parent="."]
 anchors_preset = 8
@@ -61,3 +63,5 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_jptlu")
 theme_override_styles/hover = SubResource("StyleBoxFlat_lew4s")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_8vqxk")
 text = "Play Again"
+
+[connection signal="pressed" from="RestartButton" to="." method="_on_restart_button_pressed"]
