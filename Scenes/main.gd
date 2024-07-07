@@ -39,6 +39,7 @@ func new_game():
 	move_direction = up
 	can_move = true
 	generate_snake()
+	move_food()
 	
 func generate_snake():
 	old_data.clear()
