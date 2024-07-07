@@ -17,3 +17,5 @@ texture = ExtResource("2_xek1y")
 
 [node name="MoveTimer" type="Timer" parent="."]
 wait_time = 0.1
+
+[connection signal="timeout" from="MoveTimer" to="." method="_on_move_timer_timeout"]

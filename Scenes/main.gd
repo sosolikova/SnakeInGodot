@@ -80,3 +80,7 @@ func move_snake():
 func start_game():
 	game_started = true
 	$MoveTimer.start()
+
+
+func _on_move_timer_timeout():
+	pass # Replace with function body.
