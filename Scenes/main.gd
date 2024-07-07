@@ -4,6 +4,10 @@ extends Node2D
 var score : int
 var game_started : bool = false
 
+# grid variables
+var cells : int = 20
+var cell_size : int = 50
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
