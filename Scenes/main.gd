@@ -110,6 +110,14 @@ func check_self_eaten():
 	for i in range(1, len(snake_data)):
 		if snake_data[0] == snake_data[i]:
 			end_game()
+
+func check_food_eaten():
+	# if snake eats the food, add a segment and move the food
+	if snake_data[0] == food_pos:
+		score += 1
+		$Hud.get_node("ScoreLabel").text = "SCORE: " + str(score)
+		add_segment(old_data[-1])
+		move_food()
 			
 func move_food():
 	while regen_food:
