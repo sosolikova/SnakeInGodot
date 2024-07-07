@@ -34,6 +34,8 @@ func _ready():
 	new_game()
 
 func new_game():
+	get_tree().paused = false
+	$GameOverMenu.hide()
 	score = 0
 	$Hud.get_node("ScoreLabel").text = "SCORE: " + str(score)
 	move_direction = up
