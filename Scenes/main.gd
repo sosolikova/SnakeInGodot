@@ -52,4 +52,13 @@ func add_segment(pos):
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	move_snake()
+
+func move_snake():
+	if can_move:
+		if Input.is_action_just_pressed("move_down") and move_direction != up:
+			move_direction = down
+			can_move = false
+			if not game_started:
+				start_game()
+
