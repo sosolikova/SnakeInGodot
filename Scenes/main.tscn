@@ -14,3 +14,6 @@ position = Vector2(500, 550)
 texture = ExtResource("2_xek1y")
 
 [node name="Hud" parent="." instance=ExtResource("3_dm3la")]
+
+[node name="MoveTimer" type="Timer" parent="."]
+wait_time = 0.1
