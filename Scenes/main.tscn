@@ -1,8 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://dp4pnqgjxb4ki"]
+[gd_scene load_steps=3 format=3 uid="uid://dp4pnqgjxb4ki"]
 
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_wdbdp"]
+[ext_resource type="Texture2D" uid="uid://caio5c8hkiroh" path="res://assets/bg.png" id="2_xek1y"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_wdbdp")
 
 [node name="Background" type="Sprite2D" parent="."]
+position = Vector2(500, 550)
+texture = ExtResource("2_xek1y")
