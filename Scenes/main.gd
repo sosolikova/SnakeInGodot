@@ -10,6 +10,10 @@ var game_started : bool = false
 var cells : int = 20
 var cell_size : int = 50
 
+# food variables
+var food_pos : Vector2
+var regen_food : bool = true
+
 # snake variables
 var old_data : Array
 var snake_data : Array
@@ -105,3 +109,6 @@ func check_self_eaten():
 	for i in range(1, len(snake_data)):
 		if snake_data[0] == snake_data[i]:
 			end_game()
+
+func end_game():
+	pass
