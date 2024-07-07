@@ -1,10 +1,16 @@
-[gd_scene format=3 uid="uid://cltjrnx5g5cek"]
+[gd_scene load_steps=2 format=3 uid="uid://cltjrnx5g5cek"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vtqgy"]
+bg_color = Color(0.44313, 0.579619, 0.955695, 1)
 
 [node name="Hud" type="CanvasLayer"]
 
 [node name="ScorePanel" type="Panel" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 50.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_vtqgy")
 
 [node name="ScoreLabel" type="Label" parent="."]
 offset_right = 40.0
