@@ -14,6 +14,11 @@ config/name="Snake In Godot"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
+[display]
+
+window/size/viewport_width=1000
+window/size/viewport_height=1050
+
 [dotnet]
 
 project/assembly_name="Snake In Godot"
