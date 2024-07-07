@@ -109,6 +109,16 @@ func check_self_eaten():
 	for i in range(1, len(snake_data)):
 		if snake_data[0] == snake_data[i]:
 			end_game()
+			
+func move_food():
+	while regen_food:
+		regen_food = false
+		food_pos = Vector2(randi_range(0, cells - 1), randi_range(0, cells - 1))
+		for i in snake_data:
+			if food_pos == i:
+				regen_food = true
+	$Food.position = (food_pos * cell_size) + Vector2(0, cell_size)
+	regen_food = true
 
 func end_game():
 	pass
