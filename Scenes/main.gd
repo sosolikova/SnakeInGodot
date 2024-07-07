@@ -10,6 +10,11 @@ var game_started : bool = false
 var cells : int = 20
 var cell_size : int = 50
 
+# snake variables
+var old_data : Array
+var snake_data : Array
+var snake : Array
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
